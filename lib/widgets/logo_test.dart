@@ -8,9 +8,10 @@ class LogoText extends StatelessWidget {
   Widget build(BuildContext context) {
     return ShaderMask(
       shaderCallback: (bounds) => LinearGradient(
+        
         colors: [AppColors.primary,
          AppColors.secondary],
-         
+
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
       ).createShader(Rect.fromLTWH(0, 0, bounds.height, bounds.height)),

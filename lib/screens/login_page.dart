@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:project_level_1/app_colors.dart';
 import 'package:project_level_1/screens/register_page.dart';
+import 'package:project_level_1/widgets/custom_button.dart';
 import 'package:project_level_1/widgets/custom_text_field.dart';
 import 'package:project_level_1/widgets/logo_test.dart';
 
@@ -58,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                   hint: 'Password',
                   icon: Icons.lock_clock_outlined,
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: 4),
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
@@ -79,36 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 SizedBox(height: 10),
-                Container(
-                  width: 199,
-                  height: 53,
-
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 80,
-                        spreadRadius: 1,
-                      ),
-                    ],
-                    borderRadius: BorderRadius.circular(5),
-                    gradient: LinearGradient(
-                      colors: [AppColors.primary, Colors.black45],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'LOG IN',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
+                CustomButton(text: 'LOG IN',),
                 SizedBox(height: 10),
                 Text(
                   'Or Sign In With',

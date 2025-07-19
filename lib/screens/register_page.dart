@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_level_1/app_colors.dart';
 import 'package:project_level_1/screens/login_page.dart';
+import 'package:project_level_1/widgets/custom_button.dart';
 import 'package:project_level_1/widgets/custom_text_field.dart';
 
 class SignUp extends StatefulWidget {
@@ -70,7 +71,7 @@ class _SignUpState extends State<SignUp> {
                 SizedBox(height: 15),
                   CustomTextField(
                   controller: firstName,
-                  hint: 'email',
+                  hint: 'Email',
                   icon: Icons.email_outlined,
                 ),
                 SizedBox(height: 15),
@@ -86,36 +87,7 @@ class _SignUpState extends State<SignUp> {
                   icon: Icons.lock_clock_outlined,
                 ),
                 SizedBox(height: 36),
-                Container(
-                  width: 199,
-                  height: 53,
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 80,
-                        spreadRadius: 1,
-                      ),
-                    ],
-                    borderRadius: BorderRadius.circular(5),
-                    gradient: LinearGradient(
-                      colors: [AppColors.primary, Colors.black45],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'CREATE',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  
-                ),
+                CustomButton(text: 'CREATE',),
                   SizedBox(height: 15),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
